@@ -181,65 +181,66 @@ div {
 					</form>
 				</div>
 			</div>
-				<div id="product" class="tab-pane" id="1a"">
-				<sf:form action="${contextRoot}/saveProd" modelAttribute="product" method="POST" enctype="multipart/form-data" >
-					<div class="form-group">
+				<div class="tab-pane" id="1a">
+				<div class="container">
+					<h2>Product Form</h2>
+				<sf:form action="${contextRoot}/aadmin/saveProd" modelAttribute="product" method="POST" enctype="multipart/form-data" >
+					<div class="col-xs-4" class="form-group">
 						<sf:label for="pName" path="pname">Product Name</sf:label> 
 						<sf:input type="text" path= "pname" class="form-control" id="pName" placeholder="Enter Product Name"
 							name="pName"></sf:input>
-					</div>
-					<div class="form-group">
+					</div><br>
+					<div class="col-xs-4"  class="form-group">
 						<sf:label for="pDesc" path="description">Product Description</sf:label>
 						<sf:textarea class="form-control" path="description" id="pDesc" rows="3"></sf:textarea>
-					</div>
-					<div class="form-group">
+					</div><br>
+					<div class="col-xs-4" class="form-group">
 						<sf:label for="pPrice" path="price">Price</sf:label> 
 						<sf:input type="text" path="price"
 							class="form-control" id="pPrice"
 							placeholder="Enter Product Price" name="pPrice"/>
-					</div>
+					</div><br>
 
-					<div class="form-group">
+					<div  class="col-xs-4" class="form-group">
 						<sf:label for="pStock" path="stock">Stock</sf:label> 
 						<sf:input type="text" path="stock" class="form-control" id="pStock" placeholder="Enter Stock"
 							name="pStock"/>
-					</div>
+					</div><br>
 
-					<div class="form-group">
+					<div class="col-xs-4" class="form-group">
 						<label for="cid">Category ID</label> 
 						<sf:select class="form-control" path="category" name="category"
-							items="${categories}"
+							items="${categoires}"
 							itemLabel="cname"
 							itemValue="cid"	
 						/>
-					</div>
+					</div><br>
 
-					<div class="form-group">
+					<div class="col-xs-4" class="form-group">
 						<label for="sid">Supplier ID</label> 
 						<sf:select class="form-control" path="supplier"
 							name="supplier"
 							items="${suppliers}"
-							itemLabel="supplierName"
+							itemLabel="sname"
 							itemValue="sid"
 						/>
-					</div>
+					</div><br>
 
-					<div class="form-group">
+					<div class="col-xs-4" class="form-group">
 						<sf:label for="file" path="pimage">Select Product Image</sf:label> 
 						<sf:input type="file" class="form-control-file" id="pimage" path="pimage" name="pimage"></sf:input>
-					</div>
+					</div><br
+					>
 					<sf:button type="submit" class="btn btn-default">Submit</sf:button>
 				
 				<sf:hidden path="pid"/>
-				<sf:hidden path="productName"/>
-				<sf:hidden path="productDescription"/>
+				<sf:hidden path="pname"/>
+				<sf:hidden path="description"/>
 				<sf:hidden path="price"/>
 				<sf:hidden path="stock"/>
 				</sf:form>
 			</div>
 		</div>
-
-	</div>
 	<br><br>
 	<jsp:include page="footer.jsp" />
 </body>

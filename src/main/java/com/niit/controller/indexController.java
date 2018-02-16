@@ -27,18 +27,18 @@ public class indexController{
 		System.out.println("In footer");
 		return "footer";
 			}
-	/*@RequestMapping("/Login")
+	@RequestMapping("/login")
 	public String loginin(){
 		System.out.println("Login called");
-		return "Login";
-	}*/
-	
+		return "login";
+	}
+	/*
 	@RequestMapping("/aadmin")
 	public String admin(){
 		System.out.println("admin added");
 		return "adminAdding";
 	}
-	
+	*/
 	@RequestMapping(value={"/registration"}, method = RequestMethod.GET)
 	public ModelAndView reg(){
 		ModelAndView mv = new ModelAndView("registration");

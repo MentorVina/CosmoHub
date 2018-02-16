@@ -24,24 +24,24 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="resources/images/cos1.jpg" alt="flowers" style="width:100%;">
+        <img src="resources/images/cos1.jpg" alt="img1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="resources/images/cos2.jpg" alt="flowers" style="width:100%;">
+        <img src="resources/images/cos2.jpg" alt="img2" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="resources/images/cos3.jpg" alt="flowers" style="width:100%;">
+        <img src="resources/images/cos3.jpg" alt="img3" style="width:100%;">
       </div>
        <div class="item">
-        <img src="resources/images/cos4.jpg" alt="flowers" style="width:100%;">
+        <img src="resources/images/cos4.jpg" alt="img4" style="width:100%;">
       </div>
        <div class="item">
-        <img src="resources/images/jwe1.jpg" alt="flowers" style="width:100%;">
+        <img src="resources/images/jwe1.jpg" alt="img4" style="width:100%;">
       </div>
        <div class="item">
-        <img src="resources/images/jwel2.png" alt="flowers" style="width:100%;">
+        <img src="resources/images/jwel2.png" alt="img5" style="width:100%;">
       </div>
     </div>
 

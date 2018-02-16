@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -42,8 +45,16 @@
                 <li><a href="registration"> <span class="glyphicon glyphicon-registration-mark">Registration</span></a></li>
                 <li><a href="login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
                 <li><a href="aadmin"><span class="glyphicon glyphicon-user"></span> Admin Adding</a></li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
+                <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                <c:forEach var=" catVal"  items="${categoires}">
+                <li><a href="${pageContext.request.contextPath}/productcategoires?cid=${catVal.cid}">${catval.cname}</a>
+                </li>
+                </c:forEach> 
                 
-                
+               </ul>
                </ul>
                 
           

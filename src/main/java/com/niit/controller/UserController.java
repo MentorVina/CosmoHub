@@ -39,9 +39,13 @@ public class UserController {
 		    mv.setViewName("registration");
 		    return mv;
 	}
-		    
-		   
+		       
 	
-	
+	@RequestMapping("/goTologin")
+	public String goToLogin()
+	{
+		return "login";
+	}
+
 
 }

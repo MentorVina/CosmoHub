@@ -23,10 +23,14 @@ import com.niit.Model.Product;
 import com.niit.Model.Supplier;
 
 @Controller
-
+@RequestMapping("/aadmin")
 public class AdminController {
 	@Autowired
 	CategoryDaoImpl categoryDaoImpl;
+	@Autowired
+	ProductDaoImpl productDaoImpl;
+	@Autowired
+	SupplierDaoImpl supplierDaoImpl;
 	
 	@RequestMapping(value="/saveCat",method=RequestMethod.POST)
 	public ModelAndView saveCategoryData(@RequestParam("cid") int cid,@RequestParam("cname")String cname)
@@ -54,8 +58,7 @@ public class AdminController {
 		return mv;
 	}
 	
-	@Autowired
-	SupplierDaoImpl supplierDaoImpl;
+	
 	@RequestMapping(value="/saveSupp",method=RequestMethod.POST)
 	public ModelAndView saveSupplierData(@RequestParam("sid") int sid,@RequestParam("sname")String sname)
 	{
@@ -72,11 +75,17 @@ public class AdminController {
 	}
 	
 	
-	@Autowired
-	ProductDaoImpl productDaoImpl;
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public ModelAndView adminPage() {
+		System.out.println("in adminController constructor");
+		ModelAndView mv = new ModelAndView("adminAdding");
+		return mv;
+	}
+	
+	
 	@RequestMapping(value="/saveProd",method=RequestMethod.POST)
-	public ModelAndView saveProduct( @ModelAttribute("product") Product product, BindingResult result,
-			@RequestParam("pimage") MultipartFile file,
+	public ModelAndView saveProduct( @ModelAttribute("product") Product product, BindingResult result, @RequestParam("pimage") MultipartFile file,
 			HttpServletRequest req) 
 	{
 
@@ -141,15 +150,18 @@ public class AdminController {
 			}
 			
 			
-	@ModelAttribute("category")
+	@ModelAttribute("categoires")
 	public List<Category> getCategory(){
 		return categoryDaoImpl.getAllCategory();
 	}
 	
-	@ModelAttribute("supplier")
+	@ModelAttribute("suppliers")
 	public List<Supplier>getSupplier(){
 		return supplierDaoImpl.getAllSupplier();
 	}
 	
 
+
 }
+
+

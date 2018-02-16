@@ -17,6 +17,6 @@
        <property name="prefix" value="/WEB-INF/views/"></property>
        <property name="suffix" value=".jsp"></property>
        </bean>
-       <mvc:resources location="/WEB-INF/resources/images/" mapping="/resources/**"></mvc:resources>
+       <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
        <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 </beans>

@@ -130,6 +130,8 @@ div {
 								class="form-control" id="sppid" placeholder="Enter Supplier Id"
 								name="sid">
 						</div>
+						
+						
 						<br>
 						<br>
 						<br>
@@ -150,6 +152,7 @@ div {
 						</div>
 					</form>
 				</div>
+			</div>
 			</div>
 
 			<div class="tab-pane" id="2a">
@@ -241,6 +244,8 @@ div {
 				</sf:form>
 			</div>
 		</div>
+		</div>
+		
 	<br><br>
 	<jsp:include page="footer.jsp" />
 </body>

@@ -17,28 +17,37 @@ public class indexController{
 	
 	
 	
-	@RequestMapping("/header")
-	public String header(){
-		System.out.println("In header");
-		return "header";
+		@RequestMapping("/header")
+		public String header(){
+			System.out.println("In header");
+			return "header";
+		}
+			
+	
+					
+	@RequestMapping("/prodheader")
+	public String prodhead(){
+		System.out.println("In prodheader");
+		return "prodheader";
 			}
 	@RequestMapping("/footer")
 	public String signin(){
 		System.out.println("In footer");
 		return "footer";
 			}
-	@RequestMapping("/login")
+	@RequestMapping("/goTologin")
 	public String loginin(){
 		System.out.println("Login called");
 		return "login";
 	}
-	/*
+	
+	
 	@RequestMapping("/aadmin")
 	public String admin(){
 		System.out.println("admin added");
 		return "adminAdding";
 	}
-	*/
+	
 	@RequestMapping(value={"/registration"}, method = RequestMethod.GET)
 	public ModelAndView reg(){
 		ModelAndView mv = new ModelAndView("registration");

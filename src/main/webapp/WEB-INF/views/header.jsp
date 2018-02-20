@@ -5,7 +5,7 @@
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>CosmoHub</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -43,22 +43,51 @@
               <!--  <li><a class="navbar-brand" href="#">Cosmo Hub</a></li>-->
                 <li><a href="#"><span class="glyphicon glyphicon-home">Home</span></a></li>
                 <li><a href="registration"> <span class="glyphicon glyphicon-registration-mark">Registration</span></a></li>
-                <li><a href="login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+                <li><a href="goTologin"><span class="glyphicon glyphicon-user"></span>Login</a></li>
                 <li><a href="aadmin"><span class="glyphicon glyphicon-user"></span> Admin Adding</a></li>
+                 <li><a href="aadmin/getallpro"><span class="glyphicon glyphicon-user"></span>ProductDisplay</a></li>
+                  
                 <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
                 <span class="caret"></span></a>
                  <ul class="dropdown-menu">
-                <c:forEach var=" catVal"  items="${categoires}">
-                <li><a href="${pageContext.request.contextPath}/productcategoires?cid=${catVal.cid}">${catval.cname}</a>
+
+
+                <c:forEach var="catVal"  items="${categoires}">
+                <li><a href="${pageContext.request.contextPath}/productslist?cid=${catVal.cid}">${catval.cname}</a>
                 </li>
                 </c:forEach> 
                 
                </ul>
                </ul>
+               
+               <div class="nav navbar-nav navbar right">
+               
+               <!--<c:if test="${pageContext.request.userPrincipal.name==null} ">
+               <li><a href="${pageContext.request.contextPath}/registration">Register</a></li>
+               <li><a href="${pageContext.request.contextPath}/goTologin">login</a></li>
+               </c:if>
+               <c:if test="${pageContext.request.userPrincipal.name!=null}">
+               <li><a >Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+               <li>
+               <a href="<c:url value="/logout"/>">logout</a></li>
+               <li>
+               <a href="${ pageContext.request.contextPath}/goToCart">My cart</a></li>
+               </c:if>
+               </ul>
+               </div>-->	
+               <c:if test="${pageContext.request.userPrincipal.name != null}">
+		<c:out value="${SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString()}"></c:out>
+		<h6 style="color:white;" align="right">
+			Welcome : ${pageContext.request.userPrincipal.name} 
+			 <a href="<c:url value="/logout" />">Logout</a>
+			
+		</h6>
+		</c:if>
                 
           
         </div>
     
 </nav>
 </body>
+</html>

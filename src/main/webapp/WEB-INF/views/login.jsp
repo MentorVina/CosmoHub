@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +18,14 @@
 
  <div class="container">
   <h2>Welcome To Login Page!!!</h2>
-  <form action="/login" method="Post">
+  <form action="<c:url value="/security_check"/>" method="Post">
+  <c:if test="$(not empty error)">
+  <div class "error" style="color:#ff0000:">${error}</div>
+  </c:if>
+  <c:if test="$(not empty logout)">
+  <div class "error" style="color:#ff0000:">${logout}</div>
+  </c:if>
+  
  <div class="form-group">
     <label><b>Email:</b></label><br>
     <input type="text" placeholder="Enter email-id" name="email" required></div>
@@ -31,10 +39,11 @@
     <div class="form-group">
       <input type="checkbox" checked="checked"> Remember me
       
-    </label></div>
+    </div>
+    </form>
   </div>
 
-</form>
+
     </body>
     <jsp:include page="footer.jsp"/>
     

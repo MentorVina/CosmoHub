@@ -186,18 +186,32 @@ public class AdminController {
 		return "productView";
 		}
 	 
-	 
-	
-/*	@RequestMapping("deleteproduct/{pid}")
-	public String deleteProductById(@PathVariable int pid){
-		productDaoImpl.deleteProduct(pid);
-		return "redirect:/all/product/getallproducts";
-	}*/
-	
-	
+	 	@RequestMapping("/deleteproduct/{pid}")
+	public String deleteProductById(@PathVariable String pid){
+	 		int spid=Integer.parseInt(pid);
+		productDaoImpl.deleteProdPid(spid);
+
+		return "redirect:/aadmin/getallpro";
+	}
 	
 	
-	@RequestMapping("/geteditform/{pid}")
+	
+	 	
+	 	@RequestMapping("/geteditform/{pid}") 
+	 	 	public ModelAndView updateProd(@PathVariable String pid) 
+	 	 	{  
+	 		System.out.println("In get        Edit            ................Form");
+	 	 		ModelAndView mv=new ModelAndView("productEdit"); 
+	 	 		int ppid=Integer.parseInt(pid); 
+	 	 	   mv.addObject("item",productDaoImpl.getProduct(ppid)); 
+	 	 	    mv.addObject("clist",categoryDaoImpl.getAllCategory()); 
+	 	 	   mv.addObject("suplist",supplierDaoImpl.getAllSupplier()); 
+	 	 	     
+	 	 		return mv; 
+	 		} 
+               
+	 	
+/*	@RequestMapping("/geteditform/{pid}")
 	public String getEditForm(@PathVariable int pid,Model model){
 		List<Category>categories=categoryDaoImpl.getAllCategory();
 		model.addAttribute("categories",categories);
@@ -284,7 +298,7 @@ public class AdminController {
 	public List<Supplier>getSupplier3(){
 		return supplierDaoImpl.getAllSupplier();
 	}
-	
+	*/
 
 
 }

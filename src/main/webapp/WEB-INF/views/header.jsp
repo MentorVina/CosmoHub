@@ -46,20 +46,17 @@
                 <li><a href="goTologin"><span class="glyphicon glyphicon-user"></span>Login</a></li>
                 <li><a href="aadmin"><span class="glyphicon glyphicon-user"></span> Admin Adding</a></li>
                  <li><a href="aadmin/getallpro"><span class="glyphicon glyphicon-user"></span>ProductDisplay</a></li>
-                  
-                <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
-                <span class="caret"></span></a>
-                 <ul class="dropdown-menu">
+                   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a> 
+                    <ul class="dropdown-menu"> 
+            
+                      <li><a href=" ">ALL</a></li>
+                    <c:forEach var="cat" items="${catlist}">
+                   <li><a href="${pageContext.request.contextPath}/productdetails?cid=${cat.cid}">${cat.cname} </a></<c:out value="${cat.cname}"></c:out></a></li>
+                  </c:forEach>
+                 
+                      </ul>   
+                    </li>   
 
-
-                <c:forEach var="catVal"  items="${categoires}">
-                <li><a href="${pageContext.request.contextPath}/productslist?cid=${catVal.cid}">${catval.cname}</a>
-                </li>
-                </c:forEach> 
-                
-               </ul>
-               </ul>
                
                <div class="nav navbar-nav navbar right">
                

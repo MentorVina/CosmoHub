@@ -13,6 +13,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  
 </head>
 <body style="background-color: pink">
 	<jsp:include page="prodheader.jsp" />
@@ -26,12 +28,13 @@
 <c:forEach items="${prodList}" var="p">
 <c:url value="/aadmin/viewproduct/${p.pid}" var="viewUrl"></c:url>
 <c:url value="/aadmin/geteditform/${p.pid}" var="editUrl"></c:url>
+<c:url value="/aadmin/deleteproduct/${p.pid}" var="deleteUrl"></c:url>
 
 <tr><td>${p.pid}</td>
 <td><img src="${contextRoot}/resources/images/${p.imagname}" width = "40" height= "40" alt ="${p.imagname}"/></td>
 <td>${p.pname}</td><td>${p.supplier.sid}</td><td>${p.category.cid}</td><td>${p.price}</td><td>${p.description}</td><td>${p.stock}</td>
-<td><a href="${viewUrl}">"> <span class="glyphicon glyphicon-info-sign"></span></a>
- <a href=" "> <span class="glyphicon glyphicon-trash"></span></a>
+<td><a href="${viewUrl}"> <span class="glyphicon glyphicon-info-sign"></span></a>
+ <a href="${deleteUrl} "> <span class="glyphicon glyphicon-trash"></span></a>
  <a href=" ${editUrl}"> <span class="glyphicon glyphicon-pencil"></span></a>
 </td></tr>
 </c:forEach>

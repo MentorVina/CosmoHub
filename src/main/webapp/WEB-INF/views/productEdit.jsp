@@ -24,41 +24,55 @@
                <div class="container">
 			<div class="container">
 					<h2>Product Form</h2>
-				<sf:form action="${contextRoot}/aadmin/updateProd" modelAttribute="product" method="POST" enctype="multipart/form-data" >
+				<sf:form action="${contextRoot}/aadmin/saveProd" modelAttribute="product" method="POST" enctype="multipart/form-data" >
+					
+					<div class="col-xs-4" class="form-group">
+						<sf:label for="pid" path="pid">Product ID</sf:label> 
+						<sf:input type="text" path= "pid" class="form-control" id="pid" value="${item.pid}"
+							name="pid"></sf:input>
+					</div><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pName" path="pname">Product Name</sf:label> 
-						<sf:input type="text" path= "pname" class="form-control" id="pName" placeholder="Enter Product Name"
+						<sf:input type="text" path= "pname" class="form-control" id="pName" value="${item.pname}"
 							name="pName"></sf:input>
 					</div><br>
 					<div class="col-xs-4"  class="form-group">
 						<sf:label for="pDesc" path="description">Product Description</sf:label>
-						<sf:textarea class="form-control" path="description" id="pDesc" rows="3"></sf:textarea>
+						<sf:input type="text"  path="description" id="pDesc" rows="3" value="${item.description}"></sf:input>
 					</div><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pPrice" path="price">Price</sf:label> 
 						<sf:input type="text" path="price"
 							class="form-control" id="pPrice"
-							placeholder="Enter Product Price" name="pPrice"/>
+							value=" ${item.price }" name="pPrice"/>
 					</div><br>
 
 					<div  class="col-xs-4" class="form-group">
 						<sf:label for="pStock" path="stock">Stock</sf:label> 
-						<sf:input type="text" path="stock" class="form-control" id="pStock" placeholder="Enter Stock"
+						<sf:input type="text" path="stock" class="form-control" id="pStock" value="${item.stock }"
 							name="pStock"/>
 					</div><br>
 
-					<div  class="col-xs-4" class="form-group">
-						<sf:label for="cname" path="cname">Category</sf:label> 
-						<sf:input type="text" path="cname" class="form-control" id="pcat" placeholder="Enter category"
-							name="pcat"/>
-					</div><br>
-
-
-					<div  class="col-xs-4" class="form-group">
-						<sf:label for="sname" path="sname">Supplier</sf:label> 
-						<sf:input type="text" path="sname" class="form-control" id="psupp" placeholder="Enter supplier"
-							name="psupp"/>
-					</div><br>
+					
+					<div class="col-xs-4" class="form-group">
+						<label for="sid">Supplier ID</label> 
+						<sf:select class="form-control" path="supplier"
+							name="supplier"
+							items="${suplist}"
+							itemLabel="sname"
+							itemValue="sid"
+						/>
+					</div>
+					
+					<div class="col-xs-4" class="form-group">
+						<label for="cid">Category ID</label> 
+						<sf:select class="form-control" path="category"
+							name="category"
+							items="${clist}"
+							itemLabel="cname"
+							itemValue="cid"
+						/>
+					</div>
 
 
 					<div class="col-xs-4" class="form-group">

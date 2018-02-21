@@ -1,13 +1,21 @@
 package com.niit.controller;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.DaoImpl.CategoryDaoImpl;
+import com.niit.DaoImpl.ProductDaoImpl;
+import com.niit.DaoImpl.SupplierDaoImpl;
 import com.niit.DaoImpl.UserDaoImpl;
+import com.niit.Model.Category;
+import com.niit.Model.Supplier;
 import com.niit.Model.User;
 
 @Controller
@@ -79,5 +87,6 @@ public class UserController {
 		System.out.println("enter in error page");
 		return "error";
 	}
+	
 
 }

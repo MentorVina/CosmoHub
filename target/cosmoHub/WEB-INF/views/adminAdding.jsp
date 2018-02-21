@@ -120,70 +120,47 @@ div {
 		</ul>
 
 		<div class="tab-content clearfix">
-			<div class="tab-pane active" id="3a">
-				<div class="container">
-					<h2>Supplier Form</h2>
-					<form class="form-signin" action=" <c:url value="/saveSupp"/>"
+			  <div class="tab-pane active" id="3a">
+        <div class="container">
+  <h2>Supplier Form</h2>
+  <form class="form-signin" action=" <c:url value="/saveSupp"/>"
 						method="POST">
-						<div class="col-xs-4" class="form-group">
-							<label for="sid">Supplier Id:</label> <input type="sid"
-								class="form-control" id="sppid" placeholder="Enter Supplier Id"
-								name="sid">
-						</div>
-						
-						
-						<br>
-						<br>
-						<br>
-
-
-						<div class="col-xs-4" class="form-group">
-							<label for="sname">Supplier Name:</label> <input type="text"
-								class="form-control" id="sppname"
-								placeholder="Enter Supplier Name" name="sname">
-						</div>
-						<br>
-						<br>
-						<br>
-						<br>
-						<div class="col-xs-4">
-							<button type="submit" class="btn btn-primary">Submit</button>
-							<button type="button" class="btn btn-danger">Cancel</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			</div>
-
-			<div class="tab-pane" id="2a">
-				<div class="container">
-					<h2>Category Form</h2>
-					<form class="form-signin" action="<c:url value="/saveCat"/>"
+  <div class= "col-xs-4" class="form-group">
+    <label for="sid">Supplier Id:</label>
+    <input type="sid" class="form-control" id="sid" placeholder="Enter Supplier Id" name="sppid">
+  </div><br><br><br>
+  
+  
+  <div  class= "col-xs-4" class="form-group">
+    <label for="sname">Supplier Name:</label>
+    <input type="text" class="form-control" id="sname" placeholder="Enter Supplier Name" name="sppname">
+  </div><br><br><br><br>
+  <div class= "col-xs-4" >
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-danger">Cancel</button>
+  </div>
+</form>
+</div></div>
+<div class="tab-pane" id="2a">
+  <div class="container">
+  <h2>Category Form</h2>              
+  <form class="form-signin" action="<c:url value="/saveCat"/>"
 						method="POST">
-						<div class="col-xs-4" class="form-group">
-							<label for="cid">Category Id:</label> <input type="text"
-								class="form-control" id="cid" placeholder="Enter Category Id "
-								name="cid">
-						</div>
-						<br>
-						<br>
-						<br>
-						<div class="col-xs-4" class="form-group">
-							<label for="cname">Category Name:</label> <input type="text"
-								class="form-control" id="cname"
-								placeholder="Enter Category Name" name="cname">
-						</div>
-						<br>
-						<br>
-						<br>
-						<br>
-						<div class="col-xs-4">
-							<button type="submit" class="btn btn-primary">Submit</button>
-							<button type="button" class="btn btn-danger">Cancel</button>
-						</div>
-					</form>
-				</div>
-			</div>
+  <div class= "col-xs-4" class="form-group">
+    <label for="cid">Category Id:</label>
+    <input type="text" class="form-control" id="cid" placeholder="Enter Category Id " name="cid">
+  </div><br><br><br>
+  <div  class= "col-xs-4" class="form-group">
+    <label for="cname">Category Name:</label>
+    <input type="text" class="form-control" id="cname" placeholder="Enter Category Name" name="cname">
+  </div><br><br><br><br>
+  <div class= "col-xs-4" >
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-danger">Cancel</button>
+  </div>
+</form>
+</div></div>
+		
 				<div class="tab-pane" id="1a">
 				<div class="container">
 					<h2>Product Form</h2>
@@ -245,7 +222,7 @@ div {
 			</div>
 		</div>
 		</div>
-		
+		</div>
 	<br><br>
 	<jsp:include page="footer.jsp" />
 </body>

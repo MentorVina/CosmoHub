@@ -68,6 +68,12 @@ public class indexController{
 		System.out.println("Contact Us");
 		return "contact_us";
 	}
+	@RequestMapping("/home")
+	public String home()
+	{
+		System.out.println("home");
+		return "home";
+	}
 	
 	
 	@Autowired

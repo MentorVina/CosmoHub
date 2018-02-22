@@ -19,11 +19,11 @@
 
   </head>
 <body style="background-color: pink">
-<jsp:include page="prodheader.jsp"/>
+<jsp:include page="header.jsp"/>
 
                <div class="container">
 			<div class="container">
-					<h2>Product Form</h2>
+					<h2>Product Edit Form</h2>
 				<sf:form action="${contextRoot}/aadmin/saveProd" modelAttribute="product" method="POST" enctype="multipart/form-data" >
 					
 					<div class="col-xs-4" class="form-group">
@@ -81,6 +81,7 @@
 					</div><br
 					>
 					<sf:button type="submit" class="btn btn-default">Submit</sf:button>
+					
 				
 				<sf:hidden path="pid"/>
 				<sf:hidden path="pname"/>

@@ -123,17 +123,17 @@ div {
 			  <div class="tab-pane active" id="3a">
         <div class="container">
   <h2>Supplier Form</h2>
-  <form class="form-signin" action=" <c:url value="/saveSupp"/>"
+  <form class="form-signin" action=" <c:url value="/aadmin/saveSupp"/>"
 						method="POST">
   <div class= "col-xs-4" class="form-group">
     <label for="sid">Supplier Id:</label>
-    <input type="sid" class="form-control" id="sid" placeholder="Enter Supplier Id" name="sppid">
+    <input type="sid" class="form-control" id="sid" placeholder="Enter Supplier Id" name="sid">
   </div><br><br><br>
   
   
   <div  class= "col-xs-4" class="form-group">
     <label for="sname">Supplier Name:</label>
-    <input type="text" class="form-control" id="sname" placeholder="Enter Supplier Name" name="sppname">
+    <input type="text" class="form-control" id="sname" placeholder="Enter Supplier Name" name="sname">
   </div><br><br><br><br>
   <div class= "col-xs-4" >
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -144,8 +144,7 @@ div {
 <div class="tab-pane" id="2a">
   <div class="container">
   <h2>Category Form</h2>              
-  <form class="form-signin" action="<c:url value="/saveCat"/>"
-						method="POST">
+  <form class="form-signin" action="<c:url value="/aadmin/saveCat"/>" method="POST">
   <div class= "col-xs-4" class="form-group">
     <label for="cid">Category Id:</label>
     <input type="text" class="form-control" id="cid" placeholder="Enter Category Id " name="cid">
@@ -169,11 +168,11 @@ div {
 						<sf:label for="pName" path="pname">Product Name</sf:label> 
 						<sf:input type="text" path= "pname" class="form-control" id="pName" placeholder="Enter Product Name"
 							name="pName"></sf:input>
-					</div><br>
+					</div>
 					<div class="col-xs-4"  class="form-group">
 						<sf:label for="pDesc" path="description">Product Description</sf:label>
 						<sf:textarea class="form-control" path="description" id="pDesc" rows="3"></sf:textarea>
-					</div><br>
+					</div>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pPrice" path="price">Price</sf:label> 
 						<sf:input type="text" path="price"

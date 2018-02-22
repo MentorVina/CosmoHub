@@ -41,7 +41,7 @@
             <ul class="nav navbar-nav">
             <!-- Brand -->
               <!--  <li><a class="navbar-brand" href="#">Cosmo Hub</a></li>-->
-                <li><a href="#"><span class="glyphicon glyphicon-home">Home</span></a></li>
+                <li><a href="home"><span class="glyphicon glyphicon-home">Home</span></a></li>
                 <li><a href="registration"> <span class="glyphicon glyphicon-registration-mark">Registration</span></a></li>
                 <li><a href="goTologin"><span class="glyphicon glyphicon-user"></span>Login</a></li>
                 <li><a href="aadmin"><span class="glyphicon glyphicon-user"></span> Admin Adding</a></li>

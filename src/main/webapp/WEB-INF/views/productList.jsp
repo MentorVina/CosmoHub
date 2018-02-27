@@ -17,12 +17,12 @@
   
 </head>
 <body style="background-color: pink">
-	<jsp:include page="prodheader.jsp" />
+	<jsp:include page="header.jsp" />
 <h3><b>List of Product</b></h3>
 <div class ="container">
 <table class="table table-bordered" >
 <thead>
-<tr><th>Product Id</th><th>Image</th><th>Product Name</th><th>Supplier</th><th>Category</th><th>Price</th><th>Description</th><th>Stock</th><th>Action</th></tr>
+<tr><th>Product Id</th><th>Imagce</th><th>Product Name</th><th>Supplier</th><th>Category</th><th>Price</th><th>Description</th><th>Stock</th><th>Action</th></tr>
 </thead>
 <tbody>
 <c:forEach items="${prodList}" var="p">

@@ -49,6 +49,7 @@ public class CategoryController {
 	 	 	    mv.addObject("item",product); 
 	 	 	    Supplier supplier=product.getSupplier(); 
 	 	 	    mv.addObject("sup",supplier); 
+	 	 	
 	 	 	     
 	 	 	     
 	 	 	    return mv; 

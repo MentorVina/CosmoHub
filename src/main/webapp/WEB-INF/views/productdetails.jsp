@@ -26,7 +26,10 @@
      <thead> 
        <tr> 
          <th>Product ID</th> 
-         <th>Product Name</th> 
+         <th>Product Name</th>  
+            <th>Price</th> 
+             <th>Stock</th> 
+              <th>Description</th> 
          <th>Product Image</th>
          <th>Action</th>         
        </tr> 
@@ -36,8 +39,12 @@
        <c:forEach items="${prod}" var="p"> 
        <tr> 
          <td>${p.pid}</td> 
-         <td>${p.pname}</td>  
-         <td><img src="${contextRoot}/resources/images/${p.imagname}" width = "100" height= "100" alt ="${p.imagname}"/></td>      
+         <td>${p.pname}</td> 
+          <td>${p.price}</td>
+             <td>${p.stock}</td>
+              <td>${p.description}</td>   
+         
+          <td><img src="${contextRoot}/resources/images/${p.imagname}" width = "100" height= "100" alt ="${p.imagname}"/></td>      
          <td><a href="productdisplay?pid=${p.pid}">Details</a></td> 
            </tr> 
          </c:forEach>            

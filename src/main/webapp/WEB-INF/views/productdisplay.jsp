@@ -21,13 +21,11 @@
 </head>
  <body style="background-color: pink"> 
  <jsp:include page="header.jsp" />
+ 
  <div class="container"> 
  <form action="addToCart" method="get"> 
- <table class="table"> 
-     <tr> 
-     <th>Product ID</th> 
-     <td >${item.pid}</td> 
-     </tr> 
+ <table class="table" border="1px"> 
+     <caption style="color:black"><h3><i>Product List</i></h3></caption>
      <tr> 
      <th>Product Image</th> 
      <td ><img src="${contextRoot}/resources/images/${item.imagname}" width = "100" height= "100" alt ="${item.imagname}"/></td> 
@@ -42,6 +40,7 @@
          <td >${sup.sname}</td> 
          
        </tr> 
+        
        <tr> 
         <th>Price</th> 
         <td >${item.price}</td> 
@@ -50,17 +49,20 @@
       <th>Description</th> 
       <td><c>${item.description}</c></td> 
        </tr> 
+      <tr>
+        <th>Quantity</th>
+        <td><input type="text" id="quantity" name ="quantity" placeholder="Enter quantity here"/></td>
+       </tr>
       
-       <tr> 
-         <th>Stock</th> 
-         <td>${item.stock}</td> 
-        </tr> 
-       
-    
-   </table> 
- <button type="submit" action="">Add to cart</button> 
- </form> 
+</table> 
+
+<% session.setAttribute("msg","Successfully Added To Cart");%>
+<button type="submit" action="addToCart"class="btn btn-primary">Add to cart </button>
+<span class="glyphicon glyphicon-shopping-cart"></span>
+<a href="/productdetails">Back to Product list</a><br>
+</form>
  </div> 
  <jsp:include page="footer.jsp" />
+
  </body> 
  </html> 

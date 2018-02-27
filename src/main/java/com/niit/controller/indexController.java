@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.DaoImpl.CategoryDaoImpl;
 import com.niit.DaoImpl.ProductDaoImpl;
 import com.niit.Model.Category;
+import com.niit.Model.Product;
 @Controller
 public class indexController{
 	
@@ -85,6 +86,7 @@ public class indexController{
 	public List<Category> getCategory(){
 		return categoryDaoImpl.getAllCategory();
 	}
+	
 
 }
 

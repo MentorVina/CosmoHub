@@ -66,7 +66,7 @@ div.desc {
         <img src="resources/images/HudaBeuty.jpg" alt="img6" style="width:100%;">
       </div>
       <div class="item">
-        <img src="resources/images/Unicorn.jpg" alt="img6" style="width:100%;">
+        <img src="resources/images/M.A.C.jpg" alt="img6" style="width:100%;">
       </div>
     </div>
 
@@ -86,7 +86,7 @@ div.desc {
   <div class="row">
     <div class="col-sm-3">
     
-      <img src="resources/images/box_img1.jpg" class="img-responsive" style="width:100%" alt="Image">
+   <a href="lakmeprod_view.jsp"><img src="resources/images/box_img1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
     </div>
     <div class="col-sm-3"> 
      

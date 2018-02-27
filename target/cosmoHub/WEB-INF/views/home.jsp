@@ -66,7 +66,7 @@ div.desc {
         <img src="resources/images/HudaBeuty.jpg" alt="img6" style="width:100%;">
       </div>
       <div class="item">
-        <img src="resources/images/Unicorn.jpg" alt="img6" style="width:100%;">
+        <img src="resources/images/M.A.C.jpg" alt="img6" style="width:100%;">
       </div>
     </div>
 
@@ -81,50 +81,50 @@ div.desc {
     </a>
   </div>
 </div>
-<div class="container">
-<div class="gallery">
-  <a  href="#">
-    <img src="resources/images/box_img1.jpg" alt="box1" width="500" height="500">
-  </a>
+<div class="container-fluid bg-3 text-center">    
+  <h2><b><i>In The Spotlight</i></b></h2><br>
+  <div class="row">
+    <div class="col-sm-3">
+    
+   <a href="lakmeprod_view.jsp"><img src="resources/images/box_img1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+    </div>
+    <div class="col-sm-3"> 
+     
+      <img src="resources/images/box_img2.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+     
+      <img src="resources/images/box_img3.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      
+      <img src="resources/images/box_img4.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
 
-</div>
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+     
+      <img src="resources/images/box_img5.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+     
+      <img src="resources/images/box_img6.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+     
+      <img src="resources/images/box_img7.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+   <div class="col-sm-3"> 
+  
+      <img src="resources/images/box_img8.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    
+  </div>
+</div><br><br>
 
-<div class="gallery">
-  <a  href="#">
-    <img src="resources/images/box_img2.jpg" alt="box2" width="500" height="500">
-  </a>
-  
-</div>
-
-<div class="gallery">
-  <a  href="#">
-    <img src="resources/images/box_img3.jpg" alt="box3" width="500" height="500">
-  </a>
- 
-</div>
-</div>
-<div class="container">
-
-<div class="gallery">
-  <a  href="#">
-    <img src="resources/images/box_img4.jpg" alt="box4" width="500" height="500">
-  </a>
- 
-</div>
-<div class="gallery">
-  <a  href="">
-    <img src="resources/images/box_img5.jpg" alt="box5" width="500" height="500">
-  </a>
-  
-</div>
-<div class="gallery">
-  <a  href=" ">
-    <img src="resources/images/box_img6.jpg" alt="box6" width="500" height="500">
-  </a>
-  
-</div>
-  
-</div>
 <jsp:include page="footer.jsp"/>
 
 </body>

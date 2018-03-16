@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.DaoImpl.CategoryDaoImpl;
 import com.niit.DaoImpl.ProductDaoImpl;
 import com.niit.DaoImpl.SupplierDaoImpl;
+import com.niit.Model.Category;
 import com.niit.Model.Product;
 import com.niit.Model.Supplier;
 
@@ -48,7 +49,9 @@ public class CategoryController {
 	 	 		Product product=productDaoImpl.getProduct(ppid); 
 	 	 	    mv.addObject("item",product); 
 	 	 	    Supplier supplier=product.getSupplier(); 
+	 	 	    Category category=product.getCategory();
 	 	 	    mv.addObject("sup",supplier); 
+	 	 	  mv.addObject("cat",category); 
 	 	 	
 	 	 	     
 	 	 	     

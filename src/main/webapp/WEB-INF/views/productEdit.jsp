@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 <jsp:include page="header.jsp"/>
 
                <div class="container">
@@ -30,28 +30,31 @@
 						<sf:label for="pid" path="pid">Product ID</sf:label> 
 						<sf:input type="text" path= "pid" class="form-control" id="pid" value="${item.pid}"
 							name="pid"></sf:input>
-					</div><br>
+					</div>
+					<br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pName" path="pname">Product Name</sf:label> 
 						<sf:input type="text" path= "pname" class="form-control" id="pName" value="${item.pname}"
 							name="pName"></sf:input>
-					</div><br>
+					</div>
+					<br><br><br>
 					<div class="col-xs-4"  class="form-group">
 						<sf:label for="pDesc" path="description">Product Description</sf:label>
-						<sf:input type="text"  path="description" id="pDesc" rows="3" value="${item.description}"></sf:input>
-					</div><br>
+						<sf:input type="text"  path="description"  class="form-control" id="pDesc" rows="3" value="${item.description}" name="desc"></sf:input>
+					</div>
+					<br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pPrice" path="price">Price</sf:label> 
 						<sf:input type="text" path="price"
 							class="form-control" id="pPrice"
 							value=" ${item.price }" name="pPrice"/>
-					</div><br>
+					</div><br><br><br>
 
 					<div  class="col-xs-4" class="form-group">
 						<sf:label for="pStock" path="stock">Stock</sf:label> 
 						<sf:input type="text" path="stock" class="form-control" id="pStock" value="${item.stock }"
 							name="pStock"/>
-					</div><br>
+					</div><br><br><br>
 
 					
 					<div class="col-xs-4" class="form-group">
@@ -62,7 +65,7 @@
 							itemLabel="sname"
 							itemValue="sid"
 						/>
-					</div>
+					</div><br><br><br>
 					
 					<div class="col-xs-4" class="form-group">
 						<label for="cid">Category ID</label> 
@@ -72,15 +75,15 @@
 							itemLabel="cname"
 							itemValue="cid"
 						/>
-					</div>
+					</div><br><br><br>
 
 
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="file" path="pimage">Select Product Image</sf:label> 
 						<sf:input type="file" class="form-control-file" id="pimage" path="pimage" name="pimage"></sf:input>
-					</div><br
-					>
-					<sf:button type="submit" class="btn btn-default">Submit</sf:button>
+					</div><br>
+					<input class="btn btn-primary" type="submit" value="Submit">
+                     <input class="btn btn-primary" type="reset" value="Reset">
 					
 				
 				<sf:hidden path="pid"/>
@@ -89,10 +92,11 @@
 				<sf:hidden path="price"/>
 				<sf:hidden path="stock"/>
 				</sf:form>
-			</div>
+			</div>  
 		</div>
 
 </body>
+<br><br><br><br>
 <jsp:include page="footer.jsp" />
 </html>
     

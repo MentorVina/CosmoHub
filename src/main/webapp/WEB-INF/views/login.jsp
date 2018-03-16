@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Login page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,12 +13,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 <jsp:include page="header.jsp"/>
 
  <div class="container">
+ 
+ <div class="col-xs-12">
+			<c:if test="${not empty msg}">
+			<h4 class="alert alert-success">${msg}</h4>
+			</c:if>
+		</div>
+		
   <h2>Welcome To Login Page!!!</h2>
-  <form action="<c:url value="/security_check"/>" method="Post">
+  <c:url var="login" value="/login" />
+  <form action="${login}" method="Post">
   <c:if test="$(not empty error)">
   <div class "error" style="color:#ff0000:">${error}</div>
   </c:if>

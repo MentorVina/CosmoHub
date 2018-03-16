@@ -19,49 +19,51 @@
  
   
 </head>
- <body style="background-color: pink"> 
+ <body style="background-color: #FFE4C4;"> 
  <jsp:include page="header.jsp" />
- 
- <div class="container"> 
- <form action="addToCart" method="get"> 
- <table class="table" border="1px"> 
-     <caption style="color:black"><h3><i>Product List</i></h3></caption>
-     <tr> 
-     <th>Product Image</th> 
-     <td ><img src="${contextRoot}/resources/images/${item.imagname}" width = "100" height= "100" alt ="${item.imagname}"/></td> 
-     </tr> 
-       <tr> 
-         <th>Product name</th> 
-         <td >${item.pname}</td> 
-        </tr>     
-     
-       <tr> 
-         <th>Supplier ID</th> 
-         <td >${sup.sname}</td> 
-         
-       </tr> 
-        
-       <tr> 
-        <th>Price</th> 
-        <td >${item.price}</td> 
-       </tr> 
-       <tr> 
-      <th>Description</th> 
-      <td><c>${item.description}</c></td> 
-       </tr> 
-      <tr>
-        <th>Quantity</th>
-        <td><input type="text" id="quantity" name ="quantity" placeholder="Enter quantity here"/></td>
-       </tr>
-      
-</table> 
 
-<% session.setAttribute("msg","Successfully Added To Cart");%>
-<button type="submit" action="addToCart"class="btn btn-primary">Add to cart </button>
-<span class="glyphicon glyphicon-shopping-cart"></span>
-<a href="/productdetails">Back to Product list</a><br>
-</form>
- </div> 
+ <c:if test="${not empty msg}">
+Message:- ${msg}
+</c:if> 
+ <div class="container"> 
+ <form action="addToCart" method="POST"> 
+ <table style="padding-top:20px"> 
+   
+     <tr>  
+     <td ><img src="${contextRoot}/resources/images/${item.imagname}" width = "150" height= "150" alt ="${item.imagname}"/> <p><h4>Product Details</h4></td><br>
+      
+     <td> <div   style= "float:right ;font-size:12pt; font-weight:bold; "  class="col-xs-12 col-md-8" >
+           
+                
+                     <c:out value="${item.pname }"></c:out><br>
+                      <c:out value="${cat.cname }"></c:out><br>
+                    Price - <c:out value="${item.price } Rs."></c:out><br>
+                    Supplier - <c:out value="${sup.sname }"></c:out><br>
+                    
+                   <input type="text" id="qty" name ="qty" placeholder="Enter quantity here" width="38" height="38"/><br><br>
+                  
+                 <button type="submit" class="btn btn-primary  btn-md" name="add_cart">Add to cart</button>
+                 
+
+  </div>
+  </td>
+
+     </tr> 
+     <tr>
+     <td> ${item.description}</td><br></tr>
+     	</table>
+     	<input type= "hidden" id="pid" value="${item.pid}" name="pid"/>
+<input type= "hidden" id="imagname" value="${item.imagname}" name="imagname"/>	
+	</form>
+	</div>			
+     
+     
+   
+  
+
+
+  
+    
  <jsp:include page="footer.jsp" />
 
  </body> 

@@ -19,7 +19,7 @@
  
   
 </head>
- <body style="background-color: pink"> 
+ <body style="background-color: #FFE4C4;"> 
  <jsp:include page="header.jsp" />
  <div class="container">             
    <table class="table"> 

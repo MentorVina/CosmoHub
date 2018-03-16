@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 <%@ include file="header.jsp" %>
 <h3><b>Details about the Product</b></h3>
 <br><br>

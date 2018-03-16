@@ -8,58 +8,72 @@
   <title>Registration  Form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
   </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 <jsp:include page="header.jsp"/>
 
 <div class="container">
   <h2>Registration Form</h2>
-  <form class="form-signin" action="<c:url value="/saveUser"/>" method="POST">
-    <div class="form-group">
-      <label for="Name">First Name:</label>
-      <input type="text" class="form-control" id="fname" placeholder="Enter Name" name="fname">
-    </div>
-    <div class="form-group">
-      <label for="last_name">Last Name:</label>
-      <input type="text" class="form-control" id="lname" placeholder="Enter last Name" name="lname">
-    </div>
-    <div class="form-group">
-      <label for="Contact No">DOB:</label>
-      <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="dob">
-    </div>
-    <div class="form-group">
-      <label for="Contact No">Contact No:</label>
-      <input type="text" class="form-control" id="contact" placeholder="Enter phone no." name="contact">
-    </div>
-    <div class="form-group">
-      <label for="address">Address:</label>
-      <textarea class="form-control" rows="3" id="addr" name="addr"> </textarea>
-    </div>
-     <div class="form-group">
-      <label for="Email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
-    </div>
-    
-    <div class="form-group">
-      <label for="psw">Password:</label>
-      <input type="password" class="form-control" id="pass" placeholder="Enter password." name="pass"/>
-    </div>
   
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" /> Remember me
-      </label>
+  <form class="form-horizontal" action="<c:url value="/Reguser"/>" method="POST">
+  <fieldset>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="firstname">First Name</label>  
+  <div class="col-md-4">
+  <input id="fname" name="fname" type="text" placeholder="Enter your name" class="form-control input-md" required="">
+  </div>
+  </div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="lastname">Last Name</label>  
+  <div class="col-md-4">
+  <input id="fname" name="lname" type="text" placeholder="Enter your last name" class="form-control input-md" required="">
+  </div>
+  </div>
+   <div class="form-group">
+  <label class="col-md-4 control-label" for="name">DOB</label>  
+  <div class="col-md-4">
+  <input id="dob" name="dob" type="date" placeholder="Enter your DOB" class="form-control input-md" required="">
+  </div>
+  </div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="contact">Contact no.</label>  
+  <div class="col-md-4">
+  <input id="contact" name="contact" type="text" placeholder="Enter your contact no." class="form-control input-md" required=""> 
+  </div>
+</div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="contact">Address</label>  
+      <div class="col-md-4">
+      <textarea class="form-control" rows="3" id="addr" name="addr"  placeholder="Enter your address." class="form-control input-md" required=" "> </textarea>
+    </div>
     </div>
     <div class="form-group">
-    <input type="submit" class="btn btn-primary" value="Submit">
-        </div>
+  <label class="col-md-4 control-label" for="email">Email</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="Enter your email id" class="form-control input-md" required="">
+  </div>
+</div>
     
+   <div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>
+  <div class="col-md-4">
+    <input id="pass" name="pass" type="password" placeholder="Enter a password" class="form-control input-md" required="">
+  </div>
+</div>
+  
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="signup" name="submit" class="btn btn-success">Submit</button>
+  </div>
+</div>
+    </fieldset>
  </form>
+  <div>${loggStatus}</div>
 </div>
 <br><br>
 	<jsp:include page="footer.jsp" />

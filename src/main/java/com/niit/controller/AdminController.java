@@ -55,6 +55,7 @@ public class AdminController {
 		System.out.println("admin 4");
 		
 		categoryDaoImpl.insertCategory(c);
+		mv.addObject("msg", "Category \'"+ cid + " - " + cname+ "\' Added Successfully");
 	System.out.println("admin 5");
 	System.out.println(message);
 		mv.setViewName("adminAdding");
@@ -73,6 +74,7 @@ public class AdminController {
 		s.setSid(sid);
 		s.setSname(sname);
 		supplierDaoImpl.insertSupplier(s);
+		mv.addObject("msg", "Supplier \'"+ sid + " - "+ sname  +"\' Added Successfully");
 		System.out.println("1 adding");
 		mv.setViewName("adminAdding");
 		System.out.println("adding");
@@ -131,7 +133,7 @@ public class AdminController {
 				
 				productDaoImpl.insertProduct(product); 
 				
-				ModelAndView mv = new ModelAndView("adminAdding");
+				ModelAndView mv = new ModelAndView("redirect:/aadmin/getallpro");
 				mv.addObject("msg", "Product Added Successfully");
 				System.out.println("Product Inserted Successful");
 				return mv;

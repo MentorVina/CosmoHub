@@ -26,12 +26,24 @@ public class UserController {
 	
 	@Autowired	
 	UserDaoImpl userDaoImpl;
-	@RequestMapping(value="/saveUser",method=RequestMethod.POST)
+	
+	
+	@RequestMapping(value={"/registration"}, method = RequestMethod.GET)
+	public ModelAndView reg(){
+		ModelAndView mv = new ModelAndView("registration");
+		mv.addObject("user", new User());
+		return mv;
+	}
+	
+	
+	/*@RequestMapping(value="/saveUser",method=RequestMethod.POST)
 	public ModelAndView saveUserData(@RequestParam("email") String email,@RequestParam("fname")String fname,@RequestParam("lname")
 	     String lname,@RequestParam("dob")String dob,@RequestParam("contact")String contact,@RequestParam("addr")String addr,
 	     @RequestParam("pass")String pass)
 	{
 	
+		
+			
 		    ModelAndView mv=new ModelAndView();
 		    System.out.println("In User Controller");
 		    User u=new User();
@@ -42,13 +54,24 @@ public class UserController {
 		    u.setContact(contact);
 		    u.setAddr(addr);
 		    u.setPass(pass);
-		    u.setRole("User");
+		    u.setRole("USER");
 		    u.setEnabled(true);
 		    userDaoImpl.insertUser(u);
-		    mv.setViewName("registration");
 		    return mv;
 	}
-		       
+		*/ 
+	
+	@RequestMapping(value={"/Reguser"}, method=RequestMethod.POST)
+	public ModelAndView RegUser(@ModelAttribute("user") User user){
+		System.out.println("enter in register user");
+		ModelAndView mv = new ModelAndView("login");
+		user.setRole("USER");
+		user.setEnabled(Boolean.parseBoolean("TRUE"));
+		
+		userDaoImpl.insertUser(user);
+		mv.addObject("msg", "You are successfully registered.");
+		return mv;
+	}
 	
 	/*<equestMapping("/userlogged")
 	public String goToLogin()
@@ -86,6 +109,11 @@ public class UserController {
 	{
 		System.out.println("enter in error page");
 		return "error";
+	}
+	@RequestMapping("/login")
+	public String login(){
+		
+		return "login";
 	}
 	
 

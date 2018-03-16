@@ -17,7 +17,7 @@ padding-bottom: 10px;
 }
 </style>
 </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 <jsp:include page="header.jsp"/>
 <div class="container">
 <h2>Contact Us Form</h2>

@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
- Thank you for shopping with us!!!!
+<body style="background-color: #FFE4C4;">
+<jsp:include page="header.jsp"></jsp:include>
+<br><br><br><br><br>
+ <center><h1 style="color: green;">Thank you for shopping with us!!!!</h1></center>
 </body>
+   <jsp:include page="footer.jsp"></jsp:include>
 </html>

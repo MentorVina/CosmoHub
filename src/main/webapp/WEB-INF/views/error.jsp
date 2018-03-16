@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-color: #FFE4C4;">
 <h1>Access Denied!!!!</h1>
 </body>
 </html>

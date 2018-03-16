@@ -56,11 +56,6 @@ public class indexController{
 		return "adminAdding";
 	}
 	
-	@RequestMapping(value={"/registration"}, method = RequestMethod.GET)
-	public ModelAndView reg(){
-		ModelAndView mv = new ModelAndView("registration");
-		return mv;
-	}
 	
 	
 	@RequestMapping("/Contact_us")

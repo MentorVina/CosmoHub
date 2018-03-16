@@ -17,15 +17,15 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<security:http auto-config="true" use-expressions="true">
 	<security:intercept-url pattern="/aadmin/**" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/userlogged" access="permitAll" />
+	<security:intercept-url pattern="/**" access="permitAll" />
 	
 	
 		<security:form-login
 	    login-page="/login" 
 		username-parameter="email"
 		password-parameter="pass"
-		login-processing-url="/security_check"
-		authentication-success-forward-url="/userlogged"
+		
+		
 		authentication-failure-forward-url="/accessDenied"
 		   />
 		   <security:access-denied-handler error-page="/accessDenied"/>

@@ -88,26 +88,16 @@ div {
 }
 </style>
 </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 	<jsp:include page="header.jsp" />
 
 	<div class="container">
 		<h1>Welcome Admin</h1>
 	</div>
 
-
-
-	<!--<c:choose>
-		<c:when test="${message == 'success'}">
-		Welcome ${message} 
-		
-		
-		
-		</c:when>
-		<c:otherwise>
-		Bye ${message}
-		</c:otherwise>
-</c:choose> -->
+	<c:if test="${not empty msg }">
+			<h3>${msg} </h3>
+		</c:if>
 
 
 	<div id="exTab1" class="container">
@@ -136,7 +126,8 @@ div {
     <input type="text" class="form-control" id="sname" placeholder="Enter Supplier Name" name="sname">
   </div><br><br><br><br>
   <div class= "col-xs-4" >
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-success" style="padding-right:30px">Submit</button>
+  
   <button type="button" class="btn btn-danger">Cancel</button>
   </div>
 </form>
@@ -154,12 +145,11 @@ div {
     <input type="text" class="form-control" id="cname" placeholder="Enter Category Name" name="cname">
   </div><br><br><br><br>
   <div class= "col-xs-4" >
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-success">Submit</button>
   <button type="button" class="btn btn-danger">Cancel</button>
   </div>
 </form>
 </div></div>
-		
 				<div class="tab-pane" id="1a">
 				<div class="container">
 					<h2>Product Form</h2>
@@ -169,23 +159,25 @@ div {
 						<sf:input type="text" path= "pname" class="form-control" id="pName" placeholder="Enter Product Name"
 							name="pName"></sf:input>
 					</div>
+					<br><br><br><br>
 					<div class="col-xs-4"  class="form-group">
 						<sf:label for="pDesc" path="description">Product Description</sf:label>
-						<sf:textarea class="form-control" path="description" id="pDesc" rows="3"></sf:textarea>
+						<sf:textarea class="form-control" path="description" id="pDesc" rows="3"></sf:textarea><br>
 					</div>
+					<br><br><br><br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="pPrice" path="price">Price</sf:label> 
 						<sf:input type="text" path="price"
 							class="form-control" id="pPrice"
-							placeholder="Enter Product Price" name="pPrice"/>
-					</div><br>
-
+							placeholder="Enter Product Price" name="pPrice"/><br>
+					</div>
+                     <br><br><br><br>
 					<div  class="col-xs-4" class="form-group">
 						<sf:label for="pStock" path="stock">Stock</sf:label> 
 						<sf:input type="text" path="stock" class="form-control" id="pStock" placeholder="Enter Stock"
-							name="pStock"/>
-					</div><br>
-
+							name="pStock"/><br>
+					</div>
+                   <br><br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<label for="cid">Category ID</label> 
 						<sf:select class="form-control" path="category" name="category"
@@ -193,8 +185,8 @@ div {
 							itemLabel="cname"
 							itemValue="cid"	
 						/>
-					</div><br>
-
+					</div>
+                      <br><br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<label for="sid">Supplier ID</label> 
 						<sf:select class="form-control" path="supplier"
@@ -203,14 +195,15 @@ div {
 							itemLabel="sname"
 							itemValue="sid"
 						/>
-					</div><br>
-
+					</div>
+                     <br><br><br><br>
 					<div class="col-xs-4" class="form-group">
 						<sf:label for="file" path="pimage">Select Product Image</sf:label> 
 						<sf:input type="file" class="form-control-file" id="pimage" path="pimage" name="pimage"></sf:input>
 					</div><br
 					>
-					<sf:button type="submit" class="btn btn-default">Submit</sf:button>
+					  <br><br><br>
+					<sf:button type="submit" class="btn btn-success">Submit</sf:button>
 				
 				<sf:hidden path="pid"/>
 				<sf:hidden path="pname"/>

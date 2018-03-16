@@ -16,7 +16,7 @@
  
   
 </head>
-<body style="background-color: pink">
+<body style="background-color: #FFE4C4;">
 	<jsp:include page="header.jsp" />
 <h3><b>List of Product</b></h3>
 <div class ="container">
